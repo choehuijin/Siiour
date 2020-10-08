@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="head_foot.css">
+    <title>List</title>
+    <style>
+       .account{
+            position: relative;
+            width: 700px;
+            margin:50px auto;
+            padding:100px;
+            overflow: hidden;
+        
+        }
+        
+        .account ul{
+            width: 700px;
+            margin-left: 100px;
+            
+        }
+        .account li{
+            display: block; /* li안의 내용을 세로 정렬 */
+            margin: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+        .login{
+            margin-bottom: 80px;
+        }
+        .login input{
+            border: none;
+            border-bottom: 1px solid grey;
+            width: 500px;
+            height: 20px;
+
+        }
+        .login input:focus{ /*focus : 마우스로 지정했을 때.*/
+            outline: none; /*아웃라인을 none으로 주어서 겉에 테두리를 없앰.*/
+        }
+        
+        .button button{
+            width: 500px;
+            height: 50px;
+        }
+        
+        
+        
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+            <img src="img/SIIOUR.jpg" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="list_shopall.html">Shop all</a>
+                </li>
+                <li>
+                    <a href="list_bodies.html">Bodies</a>
+                </li>
+                <li>
+                    <a href="list_cardigan.html">Cardigan</a>
+                </li>
+                <li>
+                    <a href="list_dresses.html">Dresses</a>
+                </li>
+                <li>
+                    <a href="list_skirts.html">Skirts</a>
+                </li>
+                <li>
+                    <a href="list_swimwear.html">Swimwear</a>
+                </li>
+                <li>
+                    <a href="list_account.html" class="menu">Account</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="account">
+        <div class="login">
+            <ul>
+                <li>
+                    <label for ="id"> ID </label> 
+                </li>
+                <!--label 안에 for= "" 내용 넣은 후 아래 인풋 타입에 똑같이 적용할 시, 라벨 안의 텍스트 ID 클릭 시 텍스트 입력 가능-->
+                <li>
+                    <input type="text" id="id">
+                </li>
+                <li>
+                    <label for="pw"> PASSWORD </label>
+                </li>
+                <li>
+                    <input type="text" id="pw">
+                </li>
+            </ul>
+        </div>
+
+        <div class="button">
+            <ul>
+                <li>
+                    <button type="submit">Login</button>
+                </li>
+                <li>
+                    <a href="create_a.html">
+                    <button type="submit">Creat Account</button>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <div class="bottom">
+            <ul>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#"> Privacy Policy </a>
+                </li>
+                <li>
+                    <a href="#"> Terms <span>&</span> Condition </a>
+                </li>
+                <li>
+                    <a href="#"> Contact </a>
+                </li>
+                <li>
+                    <a href="#"> Delivery <span>&</span> Return </a>
+                </li>
+                <li>
+                    <a href="#"> Instagram </a>
+                </li>
+            </ul>
+        </div>
+        <p>Brand Siiour Owner Oh Su Min Address 280-9 Seongsu-dong 2-ga, Seongdong-gu, Seoul, Desian Plex 1204, Business Registration No. 306-19-51530 Contact 02-3439-0009</p>
+    </footer>
+    </footer>
+</body>
+</html>

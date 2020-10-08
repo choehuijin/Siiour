@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="head_foot.css">
+    <title>View</title>
+    <style>
+        .view{
+            width: 1500px;
+            margin: 0 auto;
+            position: relative;
+        }
+        .view ul{
+            width: 130px;
+            margin: 50px 20px 20px 0;
+            float: left;
+        }
+        .view img{
+            width: 130px;
+            height: 180px;
+        }
+        .main_img{
+            float: left;
+            margin-top: 40px;
+            width: 700px!important; /*!important : 기존에 설정해뒀던 값을 무시하고 쓰겠다는 뜻, 위의 view img 값을 무시.*/
+            height: 920px!important;
+            margin-right: 50px;
+        }
+        .view_nav{
+            width: 510px;
+            float: left;
+            margin-top: 50px;
+            
+            
+            
+        }
+        .view::after{
+            clear: both;
+        }
+        .product_name h3{
+            margin-bottom:20px;
+           
+        }
+        .product_info1{
+            width: 500px;
+            border-top: 1px solid lightgray;
+            border-bottom: 1px solid lightgray;
+            padding: 20px 0;
+            
+        }
+        .product_info2{
+            
+            padding: 20px 0;
+        }
+        tr{
+            text-align: left;
+        }
+        th{
+            width: 120px;
+            height: 30px;
+            font-size: 14px;
+        }
+        td{
+            font-size: 14px;
+        }
+        .totalprice{
+            width: 500px;
+            border-top : 1px solid grey;
+            padding: 10px 0;
+        }
+        .totalprice li{
+            margin-top: 20px;
+        }
+        .payment{
+            width: 600px;
+        }
+        .payment ul{
+            width: 100%;
+        }
+        .payment li{
+            display: inline-block;
+            text-align: center;
+            margin: 8.5px;
+        }
+        
+          
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+            <img src="img/SIIOUR.jpg" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="list_shopall.html">Shop all</a>
+                </li>
+                <li>
+                    <a href="list_bodies.html">Bodies</a>
+                </li>
+                <li>
+                    <a href="list_cardigan.html">Cardigan</a>
+                </li>
+                <li>
+                    <a href="list_dresses.html">Dresses</a>
+                </li>
+                <li>
+                    <a href="list_skirts.html">Skirts</a>
+                </li>
+                <li>
+                    <a href="list_swimwear.html">Swimwear</a>
+                </li>
+                <li>
+                    <a href="list_account.html">Account</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="view">
+        <ul id="mini">
+            <li>
+                <img src="img/Cotton_Dalston_Skirt.png">
+            </li>
+            <li>
+                <img src="img/view_1.png">
+            </li>
+            <li>
+                <img src="img/view_2.png">
+            </li>
+            <li>
+                <img src="img/view_3.png">
+            </li>
+            <li>
+                <img src="img/view_4.png">
+            </li>
+        </ul>
+
+        <img src="img/Cotton_Dalston_Skirt.png" class="main_img">
+
+        <div class="view_nav">
+            <div class="product_name">
+                <h3>Cotton Dalston Skirt</h3>
+            </div>
+            <table class="product_info1">
+                
+                    <tr>
+                        <th>
+                            Item
+                        </th>
+                        <td>
+                            Cotton Dalston Skirt
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Price
+                        </th>
+                        <td>
+                            KRW 135,000
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Shipment
+                        </th>
+                        <td>
+                            택배
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Delivery Cost
+                        </th>
+                        <td>
+                            KRW 3,000 (KRW 200,000 이상 구매 시 무료)
+                        </td>
+                    </tr>
+                
+            </table>
+
+            <table class="product_info2">
+                
+                    <tr>
+                        <th>
+                            Size
+                        </th>
+                        <td>
+                            <button type="button" style="width: 30px; height: 30px; margin:5px;">S</button>
+                        </td>
+                        <td>
+                            <button type="button" style="width: 30px; height: 30px; margin:5px;">M</button>
+                        </td>
+                        <td>
+                            <button type="button" style="width: 30px; height: 30px; margin:5px;">L</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
+                            Quantity
+                        </th>
+                        <td>
+                            <input type="number" style="width: 25px; height: 25px; margin: 5px;">
+                        </td>
+                    </tr>
+                
+            </table>
+
+            <div class="totalprice">
+                <li>
+                <span>
+                    Total (count): 
+                    <span class ="total">
+                        <strong>
+                            <em>KRW 135,000</em>
+                        </strong>
+                        (1개)
+                    </span>
+                </span>
+                </li>
+            </div>
+
+            <div class ="payment">
+                        <ul>
+                            <li>
+                                <button type="submit" style="width: 500px; height: 50px;">BUY IT NOW</button>
+                            </li>
+                            <li>
+                                <button type="submit" style="width: 240px; height: 50px;">ADD TO CART</button>
+                            </li>
+                            <li>
+                                <button type="submit" style="width: 240px; height: 50px;">WISH LIST</button>
+                            </li>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="bottom">
+            <ul>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#"> Privacy Policy </a>
+                </li>
+                <li>
+                    <a href="#"> Terms <span>&</span> Condition </a>
+                </li>
+                <li>
+                    <a href="#"> Contact </a>
+                </li>
+                <li>
+                    <a href="#"> Delivery <span>&</span> Return </a>
+                </li>
+                <li>
+                    <a href="#"> Instagram </a>
+                </li>
+            </ul>
+        </div>
+        <p>Brand Siiour Owner Oh Su Min Address 280-9 Seongsu-dong 2-ga, Seongdong-gu, Seoul, Desian Plex 1204, Business Registration No. 306-19-51530 Contact 02-3439-0009</p>
+    </footer>
+    <script>
+        window.onload=function(){ /* jquery = $(document).ready(function(){})*/
+                var smallimg = document.getElementById('mini');
+                var big = document.getElementsByClassName('main_img')[0]; /*  */
+                var image = smallimg.getElementsByTagName('img');
+
+                for(var i=0; i<image.length; i++){
+                    image[i].onmouseover=function() {
+                        big.src=this.src
+                    }
+                }
+              }
+    </script>
+</body>
+</html>

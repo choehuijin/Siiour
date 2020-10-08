@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="head_foot.css">
+    <title>List</title>
+    <style>
+        .List{
+            position: relative;
+            width: 1500px;
+            margin:50px auto 100px;
+            padding:0;
+            overflow: hidden;
+        }
+        .List img{
+            width: 430px;
+            height: 550px;
+        }
+        .List ul{
+            width: 1500px;
+        }
+        .List li{
+            display: inline-block;
+            margin: 30px;
+            overflow: hidden;
+            position: relative;
+        }
+        .List .caption{
+            position: absolute;
+            top: 550px;
+            width: 430px;
+            height: 550px;
+            padding-top: 50px;
+            background: rgba(88,85,85, 0.651);
+            opacity: 0; /*불투명도*/
+            transition: all 0.4s ease-in-out;
+            z-index: 3000;
+        }
+        .List li:hover .caption{
+            opacity: 1;
+            transform: translateY(-250px);
+        }
+        .List .caption h3{
+            color: white;
+            text-align: center;
+        }
+        .List .caption p{
+            color: white;
+            text-align: center;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .caption{
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+            <img src="img/SIIOUR.jpg" alt="logo">
+            </a>
+        </div>
+        <nav>
+            <ul>
+                <li>
+                    <a href="list_shopall.html">Shop all</a>
+                </li>
+                <li>
+                    <a href="list_bodies.html">Bodies</a>
+                </li>
+                <li>
+                    <a href="list_cardigan.html">Cardigan</a>
+                </li>
+                <li>
+                    <a href="list_dresses.html">Dresses</a>
+                </li>
+                <li>
+                    <a href="list_skirts.html">Skirts</a>
+                </li>
+                <li>
+                    <a href="list_swimwear.html" class="menu">Swimwear</a>
+                </li>
+                <li>
+                    <a href="list_account.html">Account</a>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <div class="List">
+        <ul>
+            <li>
+                <a href="view.html">
+                <img src="img/best1.png">
+                <div class="caption">
+                    <h3>Ballet Bodysuit</h3>
+                       <p>price: KRW 198,000</p> 
+                </div>
+                </a>
+            </li>
+            <li>
+                <a href="view.html">
+                <img src="img/Tank_dress.png">
+                <div class="caption">
+                    <h3>Tank dress</h3>
+                       <p>price: KRW 245,000</p>
+                </div>
+                </a>
+            </li>
+            <li>
+                <a href="view.html">
+                <img src="img/best3.png">
+                <div class="caption">
+                    <h3>Viscose Brigitte dress</h3>
+                       <p>price: KRW 251,000</p>
+                </div>
+                </a>
+            </li>
+            <li>
+                <a href="view.html">
+                <img src="img/Cotton_Dalston_Skirt.png">
+                <div class="caption">
+                    <h3>Cotton Dalston Skirt</h3>
+                       <p>price: KRW 135,000</p>
+                </div>
+                </a>
+            </li>
+            <li>
+                <a href="view.html">
+                <img src="img/Fatale_dress.png">
+                <div class="caption">
+                    <h3>Fatale dress</h3>
+                    <p>price: KRW 302,000</p>
+                </div>
+                </a>
+            </li>
+            <li>
+                <a href="view.html">
+                <img src="img/Swimwear.png">
+                <div class="caption">
+                    <h3>Proprio Swimsuit (Vintage brown)</h3>
+                    <p>KRW 180,000</p>
+                </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <footer>
+        <div class="bottom">
+            <ul>
+                <li>
+                    <a href="#">About</a>
+                </li>
+                <li>
+                    <a href="#"> Privacy Policy </a>
+                </li>
+                <li>
+                    <a href="#"> Terms <span>&</span> Condition </a>
+                </li>
+                <li>
+                    <a href="#"> Contact </a>
+                </li>
+                <li>
+                    <a href="#"> Delivery <span>&</span> Return </a>
+                </li>
+                <li>
+                    <a href="#"> Instagram </a>
+                </li>
+            </ul>
+        </div>
+        <p>Brand Siiour Owner Oh Su Min Address 280-9 Seongsu-dong 2-ga, Seongdong-gu, Seoul, Desian Plex 1204, Business Registration No. 306-19-51530 Contact 02-3439-0009</p>
+    </footer>
+    </footer>
+</body>
+</html>

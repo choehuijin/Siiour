@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="head_foot.css">
+    <title>create account</title>
+</head>
+    <style>
+    .create_a{
+        position: relative;
+        width: 700px;
+        margin:50px auto;
+        overflow: hidden;
+    }
+    h3{
+        text-align: center;
+        margin-bottom: 50px;
+    }
+    .create_a ul{
+        margin-left: 200px;
+        border-bottom: 1px solid grey;
+        padding: 30px 0;
+        width: 330px;
+    }
+    
+    .create_a li{
+        display: block; /* li안의 내용을 세로 정렬 */
+        margin: 10px;
+        overflow: hidden;
+        position: relative;
+        font-size: 13px;
+    }
+    .create_a input{
+        width: 300px;
+        height: 30px;
+        margin: 5px auto;
+    }
+    .agreement input{
+        width: 15px;
+        height: 15px;
+    }
+    .agreement ul{
+        padding: 10px 0;
+    }
+    button{
+        
+        width: 150px;
+        height: 50px;
+        margin: 50px 0px 0px 285px;
+        
+    }
+     </style>
+
+<body>
+   <header>
+    <div class="logo">
+        <a href="index.html">
+        <img src="img/SIIOUR.jpg" alt="logo">
+        </a>
+    </div>
+    <nav>
+        <ul>
+            <li>
+                <a href="list_shopall.html">Shop all</a>
+            </li>
+            <li>
+                <a href="list_bodies.html">Bodies</a>
+            </li>
+            <li>
+                <a href="list_cardigan.html">Cardigan</a>
+            </li>
+            <li>
+                <a href="list_dresses.html">Dresses</a>
+            </li>
+            <li>
+                <a href="list_skirts.html">Skirts</a>
+            </li>
+            <li>
+                <a href="list_swimwear.html">Swimwear</a>
+            </li>
+            <li>
+                <a href="list_account.html">Account</a>
+            </li>
+
+        </ul>
+    </nav>
+   </header>
+
+   <div class="create_a">
+       <ul>
+           <h3>CREATE ACCOUNT</h3>
+           <li>
+               <label for="id">ID</label><br>
+               <input type="text" id="id">
+           </li>
+            <li>
+            <label for="pw">PASSWORD</label><br>
+            <input type="password" id="pw">
+        </li>
+        <li>
+            <label for="pwc">PASSWORD CONFIRM</label><br>
+            <input type="password" id="pwc">
+        </li>
+        <li>
+            <label for="name">NAME</label><br>
+            <input type="text" id="name">
+        </li>
+        <li>
+            <label for="phone">PHONE NUMBER</label><br>
+            <input type="tel" id="phone">
+        </li>
+        <li>
+            <label for="email">E-MAIL</label><br>
+            <input type="email" id="email">
+        </li>
+       </ul>
+        <div class="agreement">
+            <ul>
+                <li>
+                이용약관에 동의하십니까?
+                    <input type="checkbox">
+                동의함.  
+                </li>
+                <li>
+                개인정보 수집 및 이용에 동의하십니까?
+                    <input type="checkbox">
+                동의함.  
+                </li>
+            </ul>
+            <button type="submit">SUBMIT</button>
+        </div>
+     </div>
+
+  
+
+   <footer>
+    <div class="bottom">
+        <ul>
+            <li>
+                <a href="#">About</a>
+            </li>
+            <li>
+                <a href="#"> Privacy Policy </a>
+            </li>
+            <li>
+                <a href="#"> Terms <span>&</span> Condition </a>
+            </li>
+            <li>
+                <a href="#"> Contact </a>
+            </li>
+            <li>
+                <a href="#"> Delivery <span>&</span> Return </a>
+            </li>
+            <li>
+                <a href="#"> Instagram </a>
+            </li>
+        </ul>
+    </div>
+    <p>Brand Siiour Owner Oh Su Min Address 280-9 Seongsu-dong 2-ga, Seongdong-gu, Seoul, Desian Plex 1204, Business Registration No. 306-19-51530 Contact 02-3439-0009</p>
+   </footer> 
+</body>
+</html>
