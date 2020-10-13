@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="head_foot.css">
     <title>View</title>
@@ -24,7 +25,7 @@
             float: left;
             margin-top: 40px;
             width: 700px!important; /*!important : 기존에 설정해뒀던 값을 무시하고 쓰겠다는 뜻, 위의 view img 값을 무시.*/
-            height: 920px!important;
+            height: 916.4px!important;
             margin-right: 50px;
         }
         .view_nav{
@@ -192,11 +193,9 @@
                         </th>
                         <td>
                             <button type="button" style="width: 30px; height: 30px; margin:5px;">S</button>
-                        </td>
-                        <td>
+                        
                             <button type="button" style="width: 30px; height: 30px; margin:5px;">M</button>
-                        </td>
-                        <td>
+                        
                             <button type="button" style="width: 30px; height: 30px; margin:5px;">L</button>
                         </td>
                     </tr>
@@ -205,7 +204,11 @@
                             Quantity
                         </th>
                         <td>
-                            <input type="number" style="width: 25px; height: 25px; margin: 5px;">
+                            <div>
+                                <input class="qty" value="1" type="text" style="width: 25px; height: 25px; margin: 5px; text-align: center; font-size: 15px;" >
+                                <button class="btn_up" style="width: 25px; height: 25px; margin: 5px;">+</button>
+                                <button class="btn_down" style="width: 25px; height: 25px; margin: 5px;">-</button>
+                            </div>
                         </td>
                     </tr>
                 
@@ -276,6 +279,23 @@
                     }
                 }
               }
+    </script>
+    <script>
+        var a = 1 //들어갈 값 (0부터 시작)
+        $(document).ready(function(){//제이쿼리 
+            $(".btn_up").click(function(){//증가라는 것을 클릭하면
+                a++;//a 변수값 1증가
+                $('.qty').val(a);//div 값에 a변수값을 출력(대입)
+            });
+            $(".btn_down").click(function(){//감소라는 것을 클릭했을때
+                if(a<=0){//만약 a 의 값이 0보다 작거나 같을 경우
+                alert("수량을 선택해 주세요.");//경고창을 띄움.
+            }else{//아니면 감소가 가능하게 만들어줌
+                a--;
+                $('.qty').val(a);
+            }
+            });
+        });
     </script>
 </body>
 </html>
