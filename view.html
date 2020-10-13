@@ -65,6 +65,22 @@
         td{
             font-size: 14px;
         }
+        .select div{
+            float: left; /*일렬로 정렬해주기 위해 왼쪽정렬*/
+            width: 30px;
+            height: 30px;
+            margin: 5px;
+            border: 2px solid rgb(228,228,228);
+            text-align: center;
+            cursor: pointer;
+            padding-top: 5px;
+        }
+        .size{
+            clear: both;
+        }
+        .on{
+            border: 2px solid black !important;
+        }
         .totalprice{
             width: 500px;
             border-top : 1px solid grey;
@@ -192,11 +208,16 @@
                             Size
                         </th>
                         <td>
-                            <button type="button" style="width: 30px; height: 30px; margin:5px;">S</button>
-                        
-                            <button type="button" style="width: 30px; height: 30px; margin:5px;">M</button>
-                        
-                            <button type="button" style="width: 30px; height: 30px; margin:5px;">L</button>
+                            <div class="select">
+                                <div id="s">S</div>
+                                <div id="m">M</div>
+                                <div id="l">L</div>
+                            </div>
+                         </td>
+                        <td>
+                            <div class="size">
+                                [필수] size
+                               </div>
                         </td>
                     </tr>
                     <tr>
@@ -220,9 +241,8 @@
                     Total (count): 
                     <span class ="total">
                         <strong>
-                            <em>KRW 135,000</em>
+                            <em class="price">KRW 0</em>
                         </strong>
-                        (1개)
                     </span>
                 </span>
                 </li>
@@ -281,11 +301,53 @@
               }
     </script>
     <script>
+        var cf = false ;//if문을 사용하기 위해서 스위치를 만들어줌 (순서1)
         var a = 1 //들어갈 값 (0부터 시작)
         $(document).ready(function(){//제이쿼리 
+
+            $("#s").click(function(){//S부분을 클릭했을 경우
+                if(cf==false){//cf값이 false일때
+                $("#s").addClass("on");//s부분에 on이라는 클래스 생성(디자인 적용)
+                $(".size").text("[필수] S");//size적히는 부분에 어떤 사이즈인지 텍스트 변경
+                cf = true;//cf를 true값으로 변경함으로 else값이 먹히게 해줌
+                }
+                else{//cf가 true라면
+                    $(".select>div").removeClass("on");//현재 s,m,l에 있는 on이라는 클래스를 모두 제거
+                    $(".size").text("[필수] Size");//텍스트도 다시 돌려놓음
+                    cf = false;//cf를 다시 false로 돌려놓고 다시 선택할 수 있게 만들어줌
+                }
+                });
+            
+            $("#m").click(function(){
+                if(cf==false){
+                $("#m").addClass("on");
+                $(".size").text("[필수] M");
+                cf = true;
+                }
+                else{
+                    $(".select>div").removeClass("on");
+                    $(".size").text("[필수] Size");
+                    cf = false;
+                }
+            });
+
+            $("#l").click(function(){   
+                if(cf==false){
+                    $("#l").addClass("on");
+                    $(".size").text("[필수] L");
+                    cf=true;
+                }
+                else{
+                    $(".select>div").removeClass("on");
+                    $(".size").text("[필수] Size");
+                    cf=false;
+                }
+            });
+
             $(".btn_up").click(function(){//증가라는 것을 클릭하면
                 a++;//a 변수값 1증가
                 $('.qty').val(a);//div 값에 a변수값을 출력(대입)
+                $(".price").text("KRW " + 135000*a);
             });
             $(".btn_down").click(function(){//감소라는 것을 클릭했을때
                 if(a<=0){//만약 a 의 값이 0보다 작거나 같을 경우
@@ -293,6 +355,8 @@
             }else{//아니면 감소가 가능하게 만들어줌
                 a--;
                 $('.qty').val(a);
+                $(".price").text("KRW " + 135000*a);
+
             }
             });
         });
